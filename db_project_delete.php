@@ -13,9 +13,9 @@
    <!-- 스타일 시트 -->
 
    <style>
-    	main {
-    		margin :50;
-    	}
+      main {
+        margin :50;
+      }
    </style>
 
 </head>
@@ -43,7 +43,7 @@
 </nav>
 
 <main>
-	
+  
 <?php
 $con = mysqli_connect("localhost","yubin", "1234", "yubin");
 settype($_POST['id'], 'integer');
@@ -60,7 +60,6 @@ echo "
   <div class='card-body'>
     <h3 class='card-title'>{$row['title']}</h3>
     <p class='card-text'>{$row['mess']}</p>
-    <button class='btn btn-outline-secondary' type='button' onclick='location.href='db_project.html'; id='button-addon2'>본문</button>
   </div>
 </div><br><br>
 ";

@@ -21,7 +21,6 @@
 </head>
 
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">공부 노트</a>

@@ -13,9 +13,9 @@
    <!-- 스타일 시트 -->
 
    <style>
-      main {
-        margin :50;
-      }
+       main {
+          margin :50;
+       }
    </style>
 
 </head>
@@ -43,20 +43,17 @@
 </nav>
 
 <main>
-  
+   
 <?php
 $con = mysqli_connect("localhost","yubin", "1234", "yubin");
-settype($_POST['id'], 'integer');
-$filtered = array(
-  'id'=>mysqli_real_escape_string($conn, $_POST['id'])
-);
-$sql = "DELETE FROM db_project WHERE ={$filtered['id']}";
+$b1_d = $_POST["b1"]; 
+$sql = "DELETE FROM db_project WHERE number=$b1_d";
 mysqli_query($con, $sql); $sql = "SELECT * FROM db_project";
 $result = mysqli_query($con, $sql);
 while($row = mysqli_fetch_assoc($result)) {
 echo "
 <div class='card'>
-  <h5 class='card-header'>{$row['today']}</h5>
+  <h5 class='card-header'>{$row['number']} . {$row['today']}</h5>
   <div class='card-body'>
     <h3 class='card-title'>{$row['title']}</h3>
     <p class='card-text'>{$row['mess']}</p>
